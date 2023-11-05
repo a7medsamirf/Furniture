@@ -1,0 +1,59 @@
+
+.sub-list-group{
+  background-color: #f4f5fa;
+}
+
+.v-sheet.v-app-bar.v-toolbar {
+  border-radius: 0;
+}
+.v-toolbar__content,
+.v-toolbar__extension {
+  padding: 0px 16px !important;
+}
+.v-toolbar .DesktopNav .v-btn--active:hover::before,
+.v-toolbar .DesktopNav .v-btn--active::before {
+  opacity: 1 !important;
+}
+.v-toolbar .DesktopNav .v-btn:before {
+  background-color: transparent;
+  border-radius: 3px;
+  bottom: unset;
+  color: inherit;
+  content: "";
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+/*   border-bottom: 3px solid;
+ */}
+
+header .v-btn:not(.v-btn--round).v-size--default {
+  height: 36px;
+  min-width: 64px !important;
+  padding: 0;
+  margin: 0px 10px;
+}
+
+.v-navigation-drawer {
+  transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 99;
+}
+.close-icon:hover .v-icon
+{
+  transition: 0.70s;
+  transform: rotate(180deg);
+}
+
+.v-menu__content {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%) !important;
+}
+
+.page-menu {
+  margin-top: 50px;
+  contain: initial;
+  overflow: visible;
+}
+

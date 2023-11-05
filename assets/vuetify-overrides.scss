@@ -1,0 +1,169 @@
+/*
+Template Name: Microfilm
+Description: Microfilm | Vue Template
+Version: 1.0
+Author: Ahmed Samir
+        linkedin    URI: https://www.linkedin.com/in/a7med-samir-f/
+        Github      URI: https://github.com/a7medsamirf
+        Facebook    URI: https://www.facebook.com/a7med.samir.93/
+        Twitter     URI: https://twitter.com/a7medsamirf
+Tags: vue, Nuxt, Vuetify, Content, APi, one page, responsive, Axios
+Main Css Rules  for Main Elements in The project
+/*
+Style Index
+==================================================
+    1. Basic Setup
+    2. Theme color
+    3. Navigation Drawer
+       - Menu Animation
+*/
+
+// =======================================
+// [ 1. Basic Setup  ]
+// =======================================
+
+/*---------- [1. Basic Setup ] ---------- */
+
+
+@font-face {
+  font-family: DINArabic;
+  src: url(./font/DINNEXTLTARABIC-LIGHT-2-2.ttf)
+}
+
+:root {
+  --maincolor: #d9230a;
+  --p-darkcolor: #a9a9a9;
+  --white-color: #fff;
+  --dark-body: #212121;
+  --white-section: #F2FBFC;
+  --dark-section: #1A1C46;
+  --dark-card: #1A1C46;
+  --white-card: #1A1C46;
+  --custom-text-color: #F68338;
+  --bg-color: linear-gradient(135deg,#d90a2c 0,#ed0d50 50%,#d9230a 100%);
+
+}
+body{
+  text-transform: capitalize;
+}
+
+.v-application--is-ltr {
+  font-family: $en-body-font-family;
+}
+
+.theme--light.v-application {
+  background: #f2fbfc !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.v-application--is-rtl,
+.v-application,
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6,
+.v-list-item__title,
+.swal2-popup.swal2-toast .swal2-html-container,
+.Vue-Toastification__toast
+ {
+ font-family: $body-font-family;
+}
+.v-application .text-h5{
+  font-family: $body-font-family;
+}
+.pt-20 {
+  padding-top: 6.25rem !important;
+  @include breakpoints-down(md) {
+    padding-top: 5rem !important;
+  }
+
+  @include breakpoints-down(xs) {
+    padding-top: 4rem !important;
+  }
+}
+
+.pa-20 {
+  padding: 4rem !important;
+  @include breakpoints-down(md) {
+    padding: 3rem !important;
+  }
+
+  @include breakpoints-down(xs) {
+    padding: 2rem !important;
+  }
+}
+
+.py-20 {
+  padding-top: 6.25rem !important;
+  padding-bottom: 6.25rem !important;
+  @include breakpoints-down(md) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  @include breakpoints-down(xs) {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+// =======================================
+// [1. Navigation Drawer  ]
+// =======================================
+
+
+
+
+
+
+
+// =======================================
+// [2. Product Card  ]
+// =======================================
+
+.Product-Card {
+  border: 1px solid #fff;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.v-btn{
+  border: 1px solid #EEEEEE;
+}
+&:hover {
+  border: 1px solid #62D0B6;
+  .v-btn.addcart{
+    background-color: #62D0B6;
+    color: #fff;
+    border: 1px solid #62D0B6;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.in-stock {
+  color: green; /* or any other preferred style */
+}
+
+.out-of-stock {
+  color: red; /* or any other preferred style */
+}
+.OutOfStock{
+  cursor: no-drop;
+}
+.old-price {
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+.old-price {
+  color: #babbbc !important;
+}
+
+}
+

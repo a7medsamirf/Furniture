@@ -1,0 +1,219 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: $primary-color;
+}
+
+::-moz-selection,
+-webkit-::-moz-selection {
+  background-color: $primary-color;
+  color: $palette-common-white !important;
+}
+
+::selection,
+-webkit-::selection,
+::-moz-selection {
+  background-color: $primary-color;
+  color: $palette-common-white !important;
+}
+
+.v-application a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*========== theme Text ==========*/
+.use-text {
+  &-title {
+    font-size: $h1-font-size;
+    font-weight: $font-bolder;
+    @include breakpoints-down(md) {
+      font-size: $h2-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h3-font-size;
+      line-height: $spacing5
+    }
+  }
+
+  &-title2 {
+    font-size: $h2-font-size;
+    line-height: $spacing3;
+    @include breakpoints-down(md) {
+      font-size: $h3-font-size;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h4-font-size;
+    }
+  }
+
+  &-title3 {
+    font-size: $h3-font-size;
+    font-weight: $font-SemiBold;
+    line-height: $spacing3;
+    @include breakpoints-down(md) {
+      font-size: $h4-font-size;
+    }
+    @include breakpoints-down(xs) {
+      font-size: $h5-font-size;
+    }
+  }
+
+  &-title4 {
+    font-size: $h4-font-size;
+    font-weight: $font-bold;
+
+    @include breakpoints-down(md) {
+      font-size: $h4-font-size;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h5-font-size;
+    }
+  }
+
+  &-title5 {
+    font-size: $h5-font-size;
+    font-weight: $font-bold;
+
+    @include breakpoints-down(md) {
+      font-size: $h5-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h6-font-size;
+      line-height: 45px;
+    }
+  }
+
+  &-subtitle {
+    font-size: $h6-font-size;
+    font-weight: $font-medium;
+    line-height: $spacing3;
+    @include description-text-color;
+    @include breakpoints-down(md) {
+      font-size: $paragraph;
+      line-height: $spacing2;
+    }
+    @include breakpoints-down(xs) {
+      font-size: $paragraph;
+      line-height: $spacing1;
+    }
+  }
+
+  &-paragraph {
+    font-weight: $font-medium;
+    font-size: $paragraph;
+    line-height: 27px !important;
+    white-space: break-spaces !important;
+    @include description-text-color;
+  }
+}
+
+.v-btn {
+  text-transform: capitalize;
+  letter-spacing: normal !important;
+  text-indent: 0 !important;
+}
+
+.btn {
+  background: var(--maincolor);
+  padding: 1em 1.5em;
+  color: #fff;
+  border-radius: 5px;
+  margin-block: 1em;
+  text-indent: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1rem;
+  transition: 0.2s ease;
+  min-width: 115px;
+  height: 3em;
+  box-shadow: 3px 3px 0px var(--maincolor);
+
+  &:hover {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 0px var(--maincolor);
+  }
+}
+
+.btn.outline {
+  background-color: transparent;
+  outline: 1px solid var(--maincolor);
+  outline-offset: -1px;
+  color: var(--maincolor);
+}
+
+.btn.default {
+  box-shadow: $box-shadow
+}
+
+.title-btn {
+  background-color: rgb(255 145 0 / 20%) !important;
+  color: #ff9100;
+  height: 36px;
+  min-width: 77px;
+  padding: 0 26px;
+  text-transform: capitalize;
+  font-size: 17px;
+  @include breakpoints-down(md) {
+    font-size: 15px !important;
+    padding: 0 10px !important;
+  }
+}
+/* 
+.v-card{
+   box-shadow: 0 14px 22px -9px rgba(187,203,216,.47)!important;
+} */
+
+.text-color-default {
+  @include title-text-color;
+}
+
+.white-text-bg-dark{
+  @include white-text-color-bg-dark;
+}
+
+.section-bg{
+  @include palette-background-section;
+}
+
+.custom-bg-color{
+      background: $custom-bg-color;
+}
+
+/* Arrows */
+.slick-prev{
+  @include right(70px);
+  @include breakpoints-down(md) {
+   top: -150px !important;
+   @include right(85px);
+}
+}
+
+.slick-next {
+  @include right(0px);
+  @include breakpoints-down(md) {
+   top: -150px !important;
+   @include right(45px);
+}
+}
+@include breakpoints-down(md) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 12px !important;
+  }
+}
+body.swal2-toast-shown .swal2-container.swal2-center{
+  top: 90%;
+}
